@@ -17,7 +17,7 @@ public class LocationServiceTest {
 
     @Test
     public void LoadLocationsTest() {
-        int count = service.locations.locations.size();
+        int count = service.wrapper.locations.size();
         Assert.assertEquals(44,count);
     }
 
@@ -25,7 +25,7 @@ public class LocationServiceTest {
     public void LoadLocationsFromFileFails() {
         service = new LocationService();
         service.LoadLocations("Bad file path");
-        Assert.assertNull(service.locations);
+        Assert.assertNull(service.wrapper);
     }
 
     @Test

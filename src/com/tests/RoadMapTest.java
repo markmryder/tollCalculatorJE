@@ -14,7 +14,7 @@ public class RoadMapTest {
     public void Setup() {
         LocationService service = new LocationService();
         service.LoadLocations("interchanges.json");
-        map = new RoadMap(service.locations.locations);
+        map = new RoadMap(service.wrapper.locations);
     }
 
     @Test

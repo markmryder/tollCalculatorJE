@@ -18,7 +18,7 @@ public class Trip {
             this.Start = start;
             this.End = end;
 
-            map = new RoadMap(service.locations.locations);
+            map = new RoadMap(service.wrapper.locations);
             map.GetDistance(Start, End);
         }
         else {
