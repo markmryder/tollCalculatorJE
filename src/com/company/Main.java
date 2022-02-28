@@ -8,12 +8,12 @@ public class Main {
 
         String start, stop;
         Scanner input = new Scanner(System.in);
-        if(args.length < 2){
+        if(args.length < 2) {
             System.out.println("Enter staring point: ");
             start = input.nextLine();
             System.out.println("Enter end point: ");
             stop = input.nextLine();
-        } else{
+        } else {
             start = args[0];
             stop = args[1];
         }
@@ -25,6 +25,8 @@ public class Main {
              System.out.println(String.format("Total distance: %s Km", trip.Distance));
         } catch (Exception e) {
             System.out.println(e.getMessage());
+            System.exit(1);
         }
+
     }
 }

@@ -13,7 +13,7 @@ public class LocationService {
 
     public void LoadLocations(String filename) {
 
-        try{
+        try {
             File myObj = new File(filename);
             Scanner myReader = new Scanner(myObj);
             String data = "";
@@ -24,7 +24,7 @@ public class LocationService {
             Gson gson = new GsonBuilder().setPrettyPrinting().create();
             wrapper = gson.fromJson(data, LocationsWrapper.class);
 
-        }catch(Exception e){
+        } catch(Exception e) {
             System.out.println("Error reading file");
         }
     }
@@ -32,7 +32,7 @@ public class LocationService {
     public boolean ValidateStartEnd(String start, String end) {
         boolean isStartValid = false;
         boolean isEndValid = false;
-        for(Location location : wrapper.locations.values()) {
+        for (Location location : wrapper.locations.values()) {
             if (start.equals(location.Name)) {
                 isStartValid = true;
             }
